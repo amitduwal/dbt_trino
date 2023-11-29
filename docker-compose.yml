@@ -18,6 +18,8 @@ services:
       POSTGRES_PASSWORD: dbt-trino
 
   metastore_db:
+    ports:
+      - "5433:5432"
     image: postgres:11
     hostname: metastore_db
     environment:
