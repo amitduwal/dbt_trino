@@ -29,6 +29,17 @@ CREATE TABLE IF NOT EXISTS datalake.iris.iris_csv
 )
 WITH (format = 'CSV',external_location = 's3a://iris/');
 
+CREATE TABLE IF NOT EXISTS datalake.iris.iris_csv
+(
+    sepal_length VARCHAR,
+    sepal_width  VARCHAR,
+    petal_length VARCHAR,
+    petal_width  VARCHAR,
+    class        VARCHAR,
+    petal VARCHAR
+)
+WITH (format = 'CSV',external_location = 's3a://iris/');
+
 select * from datalake.iris.iris_csv;
 
 
